@@ -72,7 +72,6 @@
 	  <input type="number" id="housenumber" name="hse" placeholder="House number" />
 	</p>
       </form>
-      <h3>Payment:</h3>
       <p>
 	<label for="paymethod">Payment method</label><br />
 	<select id="paymethod" name="pmth">
@@ -82,6 +81,20 @@
           <option>Bitcoin</option>
           <option>Natura</option>
 	</select>
+      </p>
+      <p>
+	<label for="gender">Gender</label><br>
+	<input type="radio" name="gender" id="male" value="male">
+	<label for="male">Male</label><br>
+	
+	<input type="radio" name="gender" id="female" value="female">
+	<label for="female">Female</label><br>
+	
+	<input checked="checked" type="radio" name="gender" id="chopper" value="chopper">
+	<label for="chopper">Attack helicopter</label><br>
+
+	<input type="radio" name="gender" id="other" value="other">
+	<label for="other">Other</label><br>
       </p>
     </section>
     <footer>
