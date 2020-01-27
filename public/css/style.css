@@ -45,3 +45,15 @@ table{
     margin: 0 auto;
     width: 75%;
 }
+
+section{
+    margin: 3vw;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    margin-top: 2%;
+}
