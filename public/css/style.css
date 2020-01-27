@@ -2,12 +2,25 @@
 
 
 
-body {
+body{
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.2em;
 
 }
 
-.allergy {
+.allergy{
     font-weight: bold;
+}
+
+#burgers{
+    background-color: black;
+    
+}
+
+#burgers li{
+    color:white;
+}
+
+#nfo{
+    
 }
