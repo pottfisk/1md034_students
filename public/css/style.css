@@ -14,7 +14,7 @@ body{
 
 #burgers{
     background-color: black;
-    
+    border-color: white;
 }
 
 #burgers li{
@@ -22,7 +22,7 @@ body{
 }
 
 #nfo{
-    
+    border-color: black;
 }
 
 button:hover{
@@ -48,6 +48,9 @@ table{
 
 section{
     margin: 3vw;
+    border: 3px dashed; 
+    padding-left: 1.5vw;
+    padding-bottom: 1.5vh;
 }
 
 h1{
