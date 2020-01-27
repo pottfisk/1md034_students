@@ -60,3 +60,15 @@ h1{
 button{
     margin-top: 2%;
 }
+
+header{
+    margin: 0 3vw;
+    height: 25vh;
+    background-repeat: repeat-x;
+}
+
+header img{
+    width: 100%;
+    height: 20vh;
+    opacity: 0.75;
+}
