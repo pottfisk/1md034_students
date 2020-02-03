@@ -5,6 +5,13 @@ function menuItem(name, desc, kcal, allergies, imgPath){
     this.allergies = allergies;
     this.imgPath = imgPath;
     this.info = () => this.name + ": " + this.kcal + " kcal";
+    this.allInfo = function(){
+   	let str = "\n";
+    for(let i = 0; i < this.allergies.length; i++){
+    	str+=this.allergies[i] + "\n";
+    }
+    return str;
+    }
 }
 
 let b1 = new menuItem("The purger", "Tasty", 2002, ["Lactose", "Gluten"]);
@@ -23,3 +30,13 @@ document.getElementById("burg2").innerHTML = b2.info();
 document.getElementById("burg3").innerHTML = b3.info();
 document.getElementById("burg4").innerHTML = b4.info();
 document.getElementById("burg5").innerHTML = b5.info();
+
+
+let menu = [b1,b2,b3,b4,b5];
+let myElement = document.getElementById("test");
+for(let i = 0; i < menu.length; i++){
+  let listItem = document.createElement("p");
+  let listValue = document.createTextNode(menu[i].info() + " " + menu[i].allInfo());
+  listItem.appendChild(listValue);
+  myElement.appendChild(listItem);
+}
