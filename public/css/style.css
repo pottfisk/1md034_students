@@ -25,7 +25,7 @@ body{
     text-align: center;
 }
 
-#nfo{
+#info{
     border-color: black;
 }
 
@@ -39,8 +39,8 @@ button:hover{
 }
 
 #burgers img{
-    width: 300px;
-    height: 300px;
+    width: 15em;
+    height: 15em;
 }
 
 
