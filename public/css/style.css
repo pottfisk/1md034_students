@@ -17,7 +17,7 @@ body{
     border-color: white;
 }
 
-#burgers li, #burgers h2, #burgers h3{
+#burgers li, #burgers h2, #burgers h3, #burgers h4{
     color:white;
 }
 
@@ -88,10 +88,10 @@ header img{
     opacity: 0.65;
 }
 
-.wrapper{
+#wrapper{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin-left: 10%;
+    
+    
 }
 
 .box{
