@@ -19,6 +19,19 @@
 	<h2>Select your Burger</h2>
 	<p>Here you choose your burger.</p>
 	<div id="wrapper">
+	  <div v-for="burger in menuCopy">
+	    <h3>{{burger.name}}</h3>
+	    <img v-bind:src="burger.imgPath">
+	    <h4>{{burger.desc}}</h4>
+	    <p>
+	      Contains {{burger.kcal}} kCal
+	    </p>
+	    <ul>
+	      <li v-for="allergy in burger.allergies">
+		{{allergy}}
+	      </li>
+	    </ul>
+	  </div>
 	  
 	</div>
       </section>

@@ -48,7 +48,6 @@ table td{
     width: 20%;
 }
 
-
 table{
     margin: 0 auto;
     width: 75%;
@@ -90,9 +89,15 @@ header img{
 
 #wrapper{
     display: grid;
-    
+    margin: 0 2%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     
 }
+
+#wrapper p{
+    color:white;
+}
+
 
 .box{
     width: 33%;

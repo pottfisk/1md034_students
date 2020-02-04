@@ -21,6 +21,7 @@ let b4 = new menuItem("The lurger", "Tasty", 2005, ["Lactose", "peanuts"],"https
 let b5 = new menuItem("The urger", "Tasty", 2006, ["Lactose", "Gluten"],"https://irepo.primecp.com/2016/03/270700/recipe-27807_ArticleImage-CategoryPage_ID-1541467.jpg?v=1541467");
 let menu = [b1,b2,b3,b4,b5];
 
+/*
 let wrapper = document.getElementById("wrapper")
 let str = "" + 100/menu.length + "% "
 wrapper.style.gridTemplateColumns = str.repeat(menu.length); 
@@ -47,7 +48,7 @@ for(let i = 0; i < menu.length; i++){
 }
 
 
-/*console.log(b1.info());
+console.log(b1.info());
 console.log(b2.info());
 console.log(b3.info());
 console.log(b4.info());
