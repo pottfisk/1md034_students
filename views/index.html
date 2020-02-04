@@ -33,6 +33,7 @@
 	      <li v-if="burger.gluten">Gluten</li>
 	      
 	    </ul>
+	    <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="burgers">
 	  </div>
 	  
 	</div>
@@ -44,25 +45,25 @@
 	<form>
 	  <p>
 	    <label for="name">Full name</label><br>
-	    <input type="text" id="name" name="n" required="required" placeholder="First- and Last name" />
+	    <input type="text" id="name" name="n" required="required" v-model="name" placeholder="First- and Last name" />
 	  </p>
 	  <p>
 	    <label for="email">E-mail</label><br>
-	    <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+	    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
 	  </p>
 	  <p>
 	    <label for="street">Street</label><br>
-	    <input type="text" id="street" name="str" placeholder="Street name" />
+	    <input v-model="street" type="text" id="street" name="str" placeholder="Street name" />
 	  </p>
 	  <p>
 	    <label for="housenumber">House</label><br>
-	    <input type="number" id="housenumber" name="hse" placeholder="House number" />
+	    <input v-model="number" type="number" id="housenumber" name="hse" placeholder="House number" />
 	  </p>
 	  
 	  <p>
 	    <label for="paymethod">Payment method</label><br />
-	    <select id="paymethod" name="pmth">
-              <option selected="selected">Mastercard/Visa</option>
+	    <select v-model="pay" id="paymethod" name="pmth">
+              <option selected="selected" >Mastercard/Visa</option>
               <option>Cash</option>
               <option>Paypal</option>
               <option>Bitcoin</option>
@@ -71,21 +72,26 @@
 	  </p>
 	  <p>
 	    <label for="gender">Gender</label><br>
-	    <input type="radio" name="gender" id="male" value="male">
+	    <input type="radio" name="gender" id="male" value="male" v-model="gender">
 	    <label for="male">Male</label><br>
 	    
-	    <input type="radio" name="gender" id="female" value="female">
+	    <input type="radio" name="gender" id="female" value="female" v-model="gender">
 	    <label for="female">Female</label><br>
 	    
-	    <input checked="checked" type="radio" name="gender" id="chopper" value="chopper">
+	    <input checked="checked" type="radio" name="gender" id="chopper" value="Attack helicopter" v-model="gender">
 	    <label for="chopper">Attack helicopter</label><br>
 
-	    <input type="radio" name="gender" id="other" value="other">
+	    <input type="radio" name="gender" id="other" value="other" v-model="gender">
 	    <label for="other">Other</label><br>
-	  </p>
+	  </p> 
+	  
 	</form>
-	<button type="submit"><img src="https://toppng.com/uploads/preview/delivery-icon-transparent-background-shipping-cost-ico-11562852302e3mtlf1bfz.png" width="30" height="30"/>Place order</button>
+	
+	<button type="submit" v-on:click="markDone(name, email, street, number, pay, gender, burgers)" id="orderButton"><img src="https://toppng.com/uploads/preview/delivery-icon-transparent-background-shipping-cost-ico-11562852302e3mtlf1bfz.png" width="30" height="30"/>Place order</button>
       </section>
+      <div id="customerInfo">
+	
+      </div>
     </main>
     <footer>
       <hr>

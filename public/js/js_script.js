@@ -1,3 +1,36 @@
+/*let orderButton = document.getElementById("orderButton");
+
+orderButton.addEventListener("click", order);
+
+function order(){
+    console.log("Button clicked");
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let street = document.getElementById("street").value;
+    let housenumber = document.getElementById("housenumber").value;
+    let pay = document.getElementById("paymethod").value;
+    let gender = null;
+    if(document.getElementById("male").checked){
+	gender = document.getElementById("male").value;
+    } 
+    if(document.getElementById("female").checked){
+	gender = document.getElementById("female").value;
+    }
+    if(document.getElementById("chopper").checked){
+	gender = document.getElementById("chopper").value;
+    }
+    if(document.getElementById("other").checked){
+	gender = document.getElementById("other").value;
+    }
+    console.log(name);
+    console.log(email);
+    console.log(street);
+    console.log(housenumber);
+    console.log(pay);
+    console.log(gender);
+}
+*/
+
 /*function menuItem(name, desc, kcal, allergies, imgPath){
     this.name = name;
     this.desc = desc;

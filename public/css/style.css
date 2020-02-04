@@ -75,6 +75,10 @@ header{
     
 }
 
+#customerInfo{
+    margin-left: 3%;
+}
+
 header h1{
     position: absolute;
     margin: 2.5% 32%;
