@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script> 
@@ -27,9 +28,10 @@
 	      Contains {{burger.kcal}} kCal
 	    </p>
 	    <ul>
-	      <li v-for="allergy in burger.allergies">
-		{{allergy}}
-	      </li>
+
+	      <li v-if="burger.lactose">Lactose</li>
+	      <li v-if="burger.gluten">Gluten</li>
+	      
 	    </ul>
 	  </div>
 	  

@@ -1,4 +1,4 @@
-function menuItem(name, desc, kcal, allergies, imgPath){
+/*function menuItem(name, desc, kcal, allergies, imgPath){
     this.name = name;
     this.desc = desc;
     this.kcal = kcal;
@@ -14,14 +14,23 @@ function menuItem(name, desc, kcal, allergies, imgPath){
     }
 }
 
-let b1 = new menuItem("The purger", "Pulled pork with hot sauce", 2002, ["Lactose", "Gluten"], "https://cdn.whatsgabycooking.com/wp-content/uploads/2016/12/Pork-Board-Pulled-Pork-5-copy.jpg");
+let b1 = new menuItem("The purger", "Pulled pork with hot sauce", 2002, ["Lactose", "Gluten"], "het food = [
+  {
+  "name": "Ostburgare",
+  "kCal": 850,
+  "lactose": true,
+  "gluten": false,
+  "img": "url/to/your/img"
+  }
+]
+         ttps://cdn.whatsgabycooking.com/wp-content/uploads/2016/12/Pork-Board-Pulled-Pork-5-copy.jpg");
 let b2 = new menuItem("The sturger", "Sturgeon burger with fishy sauce", 2030, ["Lactose", "Gluten"], "https://media-cdn.tripadvisor.com/media/photo-s/10/3b/40/7b/sturgeon-burger.jpg");
 let b3 = new menuItem("The mürger", "Müsli burger with yoghurt", 2004, ["Lactose", "Gluten"], "https://irepo.primecp.com/2016/03/270700/recipe-27807_ArticleImage-CategoryPage_ID-1541467.jpg?v=1541467");
 let b4 = new menuItem("The lurger", "Tasty", 2005, ["Lactose", "peanuts"],"https://irepo.primecp.com/2016/03/270700/recipe-27807_ArticleImage-CategoryPage_ID-1541467.jpg?v=1541467");
-let b5 = new menuItem("The urger", "Tasty", 2006, ["Lactose", "Gluten"],"https://irepo.primecp.com/2016/03/270700/recipe-27807_ArticleImage-CategoryPage_ID-1541467.jpg?v=1541467");
+let b5 = new menuItem("The urger", "Tasty", 2006, ["Lactose", "Gluten"],"https://irepo.primecp.com/2016/03/270700/recipe src={{burger.imgP-27807_ArticleImage-CategoryPage_ID-1541467.jpg?v=1541467");
 let menu = [b1,b2,b3,b4,b5];
 
-/*
+
 let wrapper = document.getElementById("wrapper")
 let str = "" + 100/menu.length + "% "
 wrapper.style.gridTemplateColumns = str.repeat(menu.length); 
