@@ -21,6 +21,7 @@
 	<p>Here you choose your burger.</p>
 	<div id="wrapper">
 	  <div v-for="burger in menuCopy">
+	    <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="burgers">
 	    <h3>{{burger.name}}</h3>
 	    <img v-bind:src="burger.imgPath">
 	    <h4>{{burger.desc}}</h4>
@@ -33,7 +34,7 @@
 	      <li v-if="burger.gluten">Gluten</li>
 	      
 	    </ul>
-	    <input type="checkbox" v-bind:id="burger.name" v-bind:value="burger.name" v-model="burgers">
+
 	  </div>
 	  
 	</div>
