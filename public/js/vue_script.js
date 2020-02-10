@@ -28,7 +28,7 @@ const vm2 = new Vue({
 	gender: "male",
 	orders: {},
 	burgers: [],
-	localOrders: {orderId: "", details: {x:0, y:0}, orderItems: []},
+	localOrders: {orderId: "T", details: {x:0, y:0}, orderItems: [], personalInfo:[]},
 	orderCount: 0
     },
     methods: {
@@ -56,15 +56,18 @@ const vm2 = new Vue({
 		    y: this.localOrders.details.y,
 		},
 		orderItems: vm.getBurgers(),
+		personalInfo: this.localOrders.personalInfo
 	    });
 	},
 	markDone: function(name, email, pay, gender) {
 	    if(name && email && pay && gender){
 		let burgers = vm.getBurgers();
 		let info = document.getElementById("customerInfo");
+		info.innerHTML = "";
 		let nameEl = document.createElement("p");
 		nameEl.innerHTML = "Name: " + name + "<br>" + "Email: " + email + "<br>" + "Payment method: " + pay + "<br>" + "Gender: " + gender + "<br>" + "Order: " + burgers;
 		info.appendChild(nameEl);
+		this.localOrders.personalInfo = [name, email, pay, gender];
 		this.addOrder();
 	    }
 	    else {
@@ -87,7 +90,7 @@ const vm2 = new Vue({
 		    x: event.clientX - 10 - offset.x,
 		    y: event.clientY - 10 - offset.y,
 		},
-		orderItems: vm.getBurgers(),
+		orderItems: vm.getBurgers()
 	    }
 	}	
     }
