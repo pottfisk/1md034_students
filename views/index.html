@@ -7,7 +7,6 @@
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/deli-very.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -86,11 +85,10 @@
 	<h1> Click in the map! </h1>
 	<a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
 	<div class="view-box">
-	  <div id="dots" v-on:click="addOrder">
+	  <div id="dots" v-on:click="displayOrder">
             <div 
-              v-for="(order, key) in orders"
-              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-              {{key}}
+              v-bind:style="{ left: localOrders.details.x + 'px', top: localOrders.details.y + 'px'}">
+              {{localOrders.orderId}}
             </div>
 	  </div>
 	</div>
