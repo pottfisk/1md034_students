@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <script type="text/javascript" src="js/menu.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
-    <script src="https://vuejs.org/js/vue.js"></script> 
+    <script src="https://vuejs.org/js/vue.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/deli-very.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Rob's Tasty Burgers</title>
     <meta charset="utf-8"/>
@@ -51,16 +55,7 @@
 	  <p>
 	    <label for="email">E-mail</label><br>
 	    <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
-	  </p>
-	  <p>
-	    <label for="street">Street</label><br>
-	    <input v-model="street" type="text" id="street" name="str" placeholder="Street name" />
-	  </p>
-	  <p>
-	    <label for="housenumber">House</label><br>
-	    <input v-model="number" type="number" id="housenumber" name="hse" placeholder="House number" />
-	  </p>
-	  
+	  </p> 
 	  <p>
 	    <label for="paymethod">Payment method</label><br />
 	    <select v-model="pay" id="paymethod" name="pmth">
@@ -87,8 +82,20 @@
 	  </p> 
 	  
 	</form>
+
+	<h1> Click in the map! </h1>
+	<a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+	<div class="view-box">
+	  <div id="dots" v-on:click="addOrder">
+            <div 
+              v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+              {{key}}
+            </div>
+	  </div>
+	</div>
 	
-	<button type="submit" v-on:click="markDone(name, email, street, number, pay, gender, burgers)" id="orderButton"><img src="https://toppng.com/uploads/preview/delivery-icon-transparent-background-shipping-cost-ico-11562852302e3mtlf1bfz.png" width="30" height="30"/>Place order</button>
+	<button type="submit" v-on:click="markDone(name, email, pay, gender, burgers)" id="orderButton"><img src="https://toppng.com/uploads/preview/delivery-icon-transparent-background-shipping-cost-ico-11562852302e3mtlf1bfz.png" width="30" height="30"/>Place order</button>
       </section>
       <div id="customerInfo">
 	
